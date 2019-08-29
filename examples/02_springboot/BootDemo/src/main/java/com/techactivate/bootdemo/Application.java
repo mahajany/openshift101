@@ -1,12 +1,13 @@
-package com.techactivate.demo;
+package com.techactivate.bootdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication 
-public class SpringBootDemoApplication {
+@SpringBootApplication
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootDemoApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
+
 }

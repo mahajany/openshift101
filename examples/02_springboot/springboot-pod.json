@@ -1,0 +1,54 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "springboot-openshift",
+    "creationTimestamp": null,
+    "labels": {
+      "name": "springboot-openshift"
+    }
+  },
+  "spec": {
+    "containers": [
+      {
+        "name": "springboot-openshift",
+        "image": "openshift/springboot-openshift",
+        "env": [
+          { "name": "RESPONSE",
+            "value": "Hello World!"
+          }
+        ],
+        "ports": [
+          {
+            "containerPort": 8080,
+            "protocol": "TCP"
+          }
+        ],
+        "resources": {},
+        "volumeMounts": [
+          {
+            "name":"tmp",
+            "mountPath":"/tmp"
+          }
+        ],
+        "terminationMessagePath": "/dev/termination-log",
+        "imagePullPolicy": "IfNotPresent",
+        "capabilities": {},
+        "securityContext": {
+          "capabilities": {},
+          "privileged": false
+        }
+      }
+    ],
+    "volumes": [
+      {
+        "name":"tmp",
+        "emptyDir": {}
+      }
+    ],
+    "restartPolicy": "Always",
+    "dnsPolicy": "ClusterFirst",
+    "serviceAccount": ""
+  },
+  "status": {}
+}
