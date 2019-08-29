@@ -13,6 +13,11 @@
       {
         "name": "hello-openshift",
         "image": "openshift/hello-openshift",
+        "env": [
+          { "name": "RESPONSE",
+            "value": "Hello World!"
+          }
+        ],
         "ports": [
           {
             "containerPort": 8080,
