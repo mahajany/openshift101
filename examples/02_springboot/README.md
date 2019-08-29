@@ -8,7 +8,7 @@ This example will serve an HTTP response of "Hello OpenShift!".
 
     $ oc get pod springboot-openshift -o yaml |grep podIP
      ==>  podIP: 10.131.16.8
-     
+
     $ curl 10.1.0.2:8080
      Hello OpenShift!
 
@@ -34,7 +34,7 @@ section.  Just add the env clause after the image name so you end up with:
 
 After that, if you are running the pod from above, delete it:
 
-    $ oc delete pod hello-openshift
+    $ oc delete pod springboot-openshift 
 
 Then you can re-create the pod as with the first example, get the new IP
 address, and then curl will show your new message:
